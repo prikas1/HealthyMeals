@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding Experience</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+  
+   <div id="guide" class="guide">
+   <h1 class="brand">HealthyMeals!</h1>
+  <h3>Welcome to Our Service!</h3>
+  <p>This onboarding process is designed to help us understand your needs better.</p>
+  <p>You'll be asked a few questions to tailor our service to your preferences.</p>
+  <p>If you'd like to skip the guide and proceed directly to the questions, click the button below.</p>
+  <button onclick="skipGuide()">Skip Guide</button>
+  <div id="fullInstructions" style="display: none;">
+    <p>Please take a moment to read the full instructions below:</p>
+    <p>This onboarding process is designed to gather information about your preferences, requirements, and expectations.</p>
+    <p>Your input is crucial for us to provide a personalized experience and improve our service.</p>
+    <p>By answering the questions thoughtfully and honestly, you'll help us tailor our offerings to better suit your needs.</p>
+    <button onclick="skipGuide()">Next</button>
+  </div>
+  <button id="showFullInstructions-btn" onclick="showFullInstructions()">Show Full Instructions</button>
+</div>
+
+
+
+    <div id="step1" class="step hidden">
+      <img src="images/dietary-restrictions1.jpg" alt="Meal Prep Service" class="service-image">
+      <h2>Dietary Restrictions</h2>
+      <label for="dietary-restrictions">Do you have any dietary restrictions?</label>
+      <input type="text" id="dietary-restrictions" placeholder="E.g., Vegetarian, Gluten-Free">
+      <button onclick="nextStep()">Next</button>
+    </div>
+    <div id="step2" class="step hidden">
+      <img src="images/home-img2.jpg" alt="Meal Prep Service" class="service-image">
+      <h2>Eating Habits</h2>
+      <label for="eating-habits">How often do you eat out per week?</label>
+      <input type="number" id="eating-habits" min="0">
+      <button onclick="nextStep()">Next</button>
+    </div>
+    <div id="step3" class="step hidden">
+      <img src="images/home-meal.jpg" alt="Meal Prep Service" class="service-image">
+      <h2>Additional Preferences</h2>
+      <label for="additional-preferences">Do you have any additional preferences or allergies?</label>
+      <textarea id="additional-preferences" placeholder="E.g., I'm allergic to nuts"></textarea>
+      <button onclick="submitForm()">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
